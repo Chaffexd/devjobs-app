@@ -9,10 +9,11 @@ type JobItemData = {
 const JobItem = ({ data }: JobItemData) => {
   console.log(data);
 
+  const jobId = data.id;
   const formattedCountry = data.location.replace(/\s+/g, "-").toLocaleLowerCase();
   const formattedJobTitle = data.position.replace(/\s+/g, "-").toLocaleLowerCase();
   const formattedCompany = data.company.replace(/\s+/g, "-").toLocaleLowerCase();
-  const formattedUrl = `${formattedCountry}/${formattedCompany}?job=${formattedJobTitle}`;
+  const formattedUrl = `${formattedCountry}/${formattedCompany}/${jobId}?job=${formattedJobTitle}`;
 
   return (
     <Link href={formattedUrl}>
