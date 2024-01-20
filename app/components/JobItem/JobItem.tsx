@@ -7,8 +7,6 @@ type JobItemData = {
 };
 
 const JobItem = ({ data }: JobItemData) => {
-  console.log(data);
-
   const jobId = data.id;
   const formattedCountry = data.location.replace(/\s+/g, "-").toLocaleLowerCase();
   const formattedJobTitle = data.position.replace(/\s+/g, "-").toLocaleLowerCase();
