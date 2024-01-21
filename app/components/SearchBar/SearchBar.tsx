@@ -79,7 +79,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             checked={fullTime}
             onChange={() => setFullTime(!fullTime)}
           />
-          <label htmlFor="fullTime" className="ml-2 mr-4 hidden sm:block">
+          <label htmlFor="fullTime" className="ml-2 mr-4 hidden sm:block dark:text-white">
             Full Time
           </label>
           <div
