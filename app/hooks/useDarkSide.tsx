@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction, Dispatch } from "react";
 
-export default function useDarkSide() {
+type Theme = "dark" | "light";
+
+export default function useDarkSide(): [Theme, Dispatch<SetStateAction<Theme>>] {
   const isLocalStorageAvailable =
     typeof window !== "undefined" && window.localStorage;
-  const [theme, setTheme] = useState(
+  const [theme, setTheme] = useState<Theme>(
     isLocalStorageAvailable ? localStorage.theme : ""
   );
 

@@ -40,7 +40,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
     if (title === "" && location === "") {
       onSearch({ title: "", location: "", fullTime });
     }
-  }, [title, location]);
+  }, [title, location, fullTime]);
 
   return (
     <div className="max-w-5xl w-full m-auto -mt-10 sm:-mt-10 sm:px-8 px-8 ">
