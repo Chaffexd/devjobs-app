@@ -6,17 +6,8 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
-    extend: {
-      colors: {
-        'scoot-bg': 'hsl(36, 87%, 49%)',
-        'second': '#47019d',
-        'three': '#e00256',
-        'black': '#212121',
-        'white': '#ffffff',
-        'gray': '#808080e2'
-      },
-    },
   },
   plugins: [],
 };

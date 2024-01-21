@@ -43,9 +43,9 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   }, [title, location]);
 
   return (
-    <div className="max-w-5xl w-full m-auto -mt-10 sm:-mt-10 sm:px-8 px-8">
-      <div className="flex justify-between rounded-md shadow-md items-center bg-white">
-        <div className="flex w-full sm:w-1/3 lg:w-2/4 sm:border-r-2 border-slate-200 border-solid p-6">
+    <div className="max-w-5xl w-full m-auto -mt-10 sm:-mt-10 sm:px-8 px-8 ">
+      <div className="flex justify-between rounded-md shadow-md items-center bg-white dark:bg-gray-800">
+        <div className="flex w-full sm:w-1/3 lg:w-2/4 sm:border-r-2 border-slate-200 dark:border-gray-700 border-solid p-6">
           <SearchIcon />
           <label htmlFor="title"></label>
           <input
@@ -55,10 +55,10 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             value={title}
             onChange={handleTitle}
             placeholder="Filter by title, companies, expertise..."
-            className="w-full sm:w-4/5 ml-2"
+            className="w-full sm:w-4/5 ml-2 dark:bg-gray-800"
           />
         </div>
-        <div className="flex items-center sm:w-1/3 lg:w-1/5 sm:border-r-2 border-slate-200 border-solid p-6">
+        <div className="flex items-center sm:w-1/3 lg:w-1/5 sm:border-r-2 border-slate-200 dark:border-gray-700 border-solid p-6">
           <LocationIcon />
           <label htmlFor="location"></label>
           <input
@@ -68,7 +68,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             value={location}
             onChange={handleLocation}
             placeholder="Filter by location..."
-            className="w-4/5 ml-2 hidden sm:block"
+            className="w-4/5 ml-2 hidden sm:block dark:bg-gray-800"
           />
         </div>
         <div className="flex items-center sm:w-1/3 lg:w-auto p-4">

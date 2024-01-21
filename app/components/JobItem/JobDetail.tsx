@@ -26,7 +26,7 @@ const JobDetail = ({ params }: JobDetailProps) => {
 
   return (
     <>
-      <header className="max-w-4xl w-10/12 sm:w-full flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white rounded-md">
+      <header className="max-w-4xl w-10/12 sm:w-full flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white dark:bg-gray-800 rounded-md">
         <div className="flex sm:flex-row items-center flex-col">
           <div
             style={{ backgroundColor: selectedJob.logoBackground }}
@@ -40,7 +40,7 @@ const JobDetail = ({ params }: JobDetailProps) => {
             />
           </div>
           <div className="flex items-center sm:items-start flex-col justify-center sm:pl-12">
-            <h1 className="text-xl font-bold mb-2 py-2 sm:py-0">{selectedJob.company}</h1>
+            <h1 className="text-xl font-bold mb-2 py-2 sm:py-0 dark:text-white">{selectedJob.company}</h1>
             <Link href={selectedJob.website} target="_blank" className="text-slate-400 hover:underline hover:text-slate-800">{urlWithoutHttps}</Link>
           </div>
         </div>
@@ -52,13 +52,13 @@ const JobDetail = ({ params }: JobDetailProps) => {
           Company Site
         </Link>
       </header>
-      <section className="max-w-4xl w-10/12 sm:w-full bg-white rounded-md mt-8 p-12">
+      <section className="max-w-4xl w-10/12 sm:w-full bg-white dark:bg-gray-800 rounded-md mt-8 p-12">
         <div>
           <span className="text-slate-400">{selectedJob.postedAt}</span>
           <span className="text-slate-400"> &bull; </span>
           <span className="text-slate-400">{selectedJob.contract}</span>
           <div className="flex flex-col sm:flex-row sm:justify-between">
-            <h3 className="font-bold text-2xl mt-4 mb-4 sm:mb-0">{selectedJob.position}</h3>
+            <h3 className="font-bold text-2xl mt-4 mb-4 sm:mb-0 dark:text-white">{selectedJob.position}</h3>
             <button className="h-12 w-full sm:w-36 mb-4 sm:mb-0 text-purple-200 bg-purple-800 font-bold hover:text-purple-800 hover:bg-purple-200 rounded-md" onClick={handleApplication}>
               Apply Now
             </button>
@@ -67,7 +67,7 @@ const JobDetail = ({ params }: JobDetailProps) => {
           <p className="mt-8 text-lg text-slate-400">
             {selectedJob.description}
           </p>
-          <h4 className="text-2xl mt-8 font-bold">Requirements</h4>
+          <h4 className="text-2xl mt-8 font-bold dark:text-white">Requirements</h4>
           <p className="text-slate-400 text-lg mt-4 mb-4">
             {selectedJob.requirements.content}
           </p>
@@ -82,7 +82,7 @@ const JobDetail = ({ params }: JobDetailProps) => {
             ))}
           </ul>
         </div>
-        <h5 className="text-2xl mt-8 font-bold mb-4">What You Will Do</h5>
+        <h5 className="text-2xl mt-8 font-bold mb-4 dark:text-white">What You Will Do</h5>
         <p className="text-slate-400 text-lg">{selectedJob.role.content}</p>
         <ol>
           {selectedJob.role.items.map((item, index) => (
@@ -92,9 +92,9 @@ const JobDetail = ({ params }: JobDetailProps) => {
           ))}
         </ol>
       </section>
-      <footer className="w-screen bg-white h-28 mt-16 flex items-center justify-center">
+      <footer className="w-screen bg-white dark:bg-gray-800 h-28 mt-16 flex items-center justify-center">
         <div className="flex max-w-4xl w-10/12 lg:w-full justify-between">
-          <h3 className="font-bold text-2xl mt-2 md:block hidden">{selectedJob.position}</h3>
+          <h3 className="font-bold text-2xl mt-2 md:block hidden dark:text-white">{selectedJob.position}</h3>
           <button className="h-12 w-full md:w-36 m-auto sm:m-0 text-purple-200 bg-purple-800 font-bold hover:text-purple-800 hover:bg-purple-200 rounded-md" onClick={handleApplication}>
             Apply Now
           </button>

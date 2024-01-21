@@ -15,7 +15,7 @@ const JobItem = ({ data }: JobItemData) => {
 
   return (
     <Link href={formattedUrl}>
-      <div className="bg-white w-full rounded-md h-52 p-6 mb-8 shadow-md">
+      <div className="bg-white w-full rounded-md h-52 p-6 mb-8 shadow-md dark:bg-gray-800">
         <div
           className="h-12 w-12 rounded-lg flex items-center justify-center -mt-12"
           style={{ backgroundColor: data.logoBackground }}
@@ -33,7 +33,7 @@ const JobItem = ({ data }: JobItemData) => {
           <span className="text-slate-400">{data.contract}</span>
         </div>
         <div className="pt-4">
-          <h1 className="font-bold">{data.position}</h1>
+          <h1 className="font-bold dark:text-white">{data.position}</h1>
           <h2 className="pt-4 text-slate-400">{data.company}</h2>
         </div>
         <p className="pt-10 text-purple-600 font-bold">{data.location}</p>
