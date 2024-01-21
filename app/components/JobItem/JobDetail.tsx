@@ -85,8 +85,8 @@ const JobDetail = ({ params }: JobDetailProps) => {
         <h5 className="text-2xl mt-8 font-bold mb-4">What You Will Do</h5>
         <p className="text-slate-400 text-lg">{selectedJob.role.content}</p>
         <ol>
-          {selectedJob.role.items.map((item) => (
-            <li className="list-decimal text-slate-400 text-lg mt-2 marker:text-purple-800 list-inside">
+          {selectedJob.role.items.map((item, index) => (
+            <li key={index} className="list-decimal text-slate-400 text-lg mt-2 marker:text-purple-800 list-inside">
               {item}
             </li>
           ))}
