@@ -43,9 +43,9 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
   }, [title, location]);
 
   return (
-    <div className="max-w-5xl w-full m-auto -mt-20 sm:-mt-10 sm:px-8 px-8">
+    <div className="max-w-5xl w-full m-auto -mt-10 sm:-mt-10 sm:px-8 px-8">
       <div className="flex justify-between rounded-md shadow-md items-center bg-white">
-        <div className="flex w-full md:w-1/3 lg:w-2/4 sm:border-r-2 border-slate-200 border-solid p-6">
+        <div className="flex w-full sm:w-1/3 lg:w-2/4 sm:border-r-2 border-slate-200 border-solid p-6">
           <SearchIcon />
           <label htmlFor="title"></label>
           <input
@@ -58,7 +58,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             className="w-full sm:w-4/5 ml-2"
           />
         </div>
-        <div className="flex items-center md:w-1/3 lg:w-1/5 sm:border-r-2 border-slate-200 border-solid p-6">
+        <div className="flex items-center sm:w-1/3 lg:w-1/5 sm:border-r-2 border-slate-200 border-solid p-6">
           <LocationIcon />
           <label htmlFor="location"></label>
           <input
@@ -71,7 +71,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             className="w-4/5 ml-2 hidden sm:block"
           />
         </div>
-        <div className="flex items-center md:w-1/3 lg:w-auto p-4">
+        <div className="flex items-center sm:w-1/3 lg:w-auto p-4">
           <input
             type="checkbox"
             id="fullTime"
