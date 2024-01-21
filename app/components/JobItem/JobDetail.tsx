@@ -26,11 +26,11 @@ const JobDetail = ({ params }: JobDetailProps) => {
 
   return (
     <>
-      <header className="max-w-4xl w-full flex items-center justify-between bg-white rounded-md">
-        <div className="flex">
+      <header className="max-w-4xl w-10/12 sm:w-full flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white rounded-md">
+        <div className="flex sm:flex-row items-center flex-col">
           <div
             style={{ backgroundColor: selectedJob.logoBackground }}
-            className="h-36 w-36 flex justify-center items-center rounded-l-md"
+            className="h-16 w-16 sm:h-36 sm:w-36 -mt-8 sm:-mt-0 flex justify-center items-center rounded-md sm:rounded-l-md"
           >
             <Image
               src={`../../../../${selectedJob.logo}`}
@@ -39,27 +39,27 @@ const JobDetail = ({ params }: JobDetailProps) => {
               alt={`Company logo of ${selectedJob.company}`}
             />
           </div>
-          <div className="flex items-start flex-col justify-center pl-12">
-            <h1 className="text-xl font-bold mb-2">{selectedJob.company}</h1>
+          <div className="flex items-center sm:items-start flex-col justify-center sm:pl-12">
+            <h1 className="text-xl font-bold mb-2 py-2 sm:py-0">{selectedJob.company}</h1>
             <Link href={selectedJob.website} target="_blank" className="text-slate-400 hover:underline hover:text-slate-800">{urlWithoutHttps}</Link>
           </div>
         </div>
         <Link
           href={selectedJob.website}
           target="_blank"
-          className="h-12 w-36 text-purple-800 bg-purple-200 font-bold hover:text-purple-200 hover:bg-purple-800 flex items-center justify-center rounded-md mr-12"
+          className="h-12 w-36 m-auto text-purple-800 bg-purple-200 font-bold hover:text-purple-200 hover:bg-purple-800 flex items-center justify-center rounded-md sm:mr-12 mt-6 mb-6 sm:mb-0 sm:mt-0"
         >
           Company Site
         </Link>
       </header>
-      <section className="max-w-4xl w-full bg-white rounded-md mt-8 p-12">
+      <section className="max-w-4xl w-10/12 sm:w-full bg-white rounded-md mt-8 p-12">
         <div>
           <span className="text-slate-400">{selectedJob.postedAt}</span>
           <span className="text-slate-400"> &bull; </span>
           <span className="text-slate-400">{selectedJob.contract}</span>
-          <div className="flex justify-between">
-            <h3 className="font-bold text-2xl mt-2">{selectedJob.position}</h3>
-            <button className="h-12 w-36 text-purple-200 bg-purple-800 font-bold hover:text-purple-800 hover:bg-purple-200 rounded-md" onClick={handleApplication}>
+          <div className="flex flex-col sm:flex-row sm:justify-between">
+            <h3 className="font-bold text-2xl mt-4 mb-4 sm:mb-0">{selectedJob.position}</h3>
+            <button className="h-12 w-full sm:w-36 mb-4 sm:mb-0 text-purple-200 bg-purple-800 font-bold hover:text-purple-800 hover:bg-purple-200 rounded-md" onClick={handleApplication}>
               Apply Now
             </button>
           </div>
@@ -93,9 +93,9 @@ const JobDetail = ({ params }: JobDetailProps) => {
         </ol>
       </section>
       <footer className="w-screen bg-white h-28 mt-16 flex items-center justify-center">
-        <div className="flex max-w-4xl w-full justify-between">
-          <h3 className="font-bold text-2xl mt-2">{selectedJob.position}</h3>
-          <button className="h-12 w-36 text-purple-200 bg-purple-800 font-bold hover:text-purple-800 hover:bg-purple-200 rounded-md" onClick={handleApplication}>
+        <div className="flex max-w-4xl w-10/12 lg:w-full justify-between">
+          <h3 className="font-bold text-2xl mt-2 md:block hidden">{selectedJob.position}</h3>
+          <button className="h-12 w-full md:w-36 m-auto sm:m-0 text-purple-200 bg-purple-800 font-bold hover:text-purple-800 hover:bg-purple-200 rounded-md" onClick={handleApplication}>
             Apply Now
           </button>
         </div>
