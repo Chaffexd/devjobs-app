@@ -34,7 +34,7 @@ const JobGrid = ({ filterCriteria }: JobGridProps) => {
   }, [filterCriteria]);
 
   return (
-    <section className="px-36 mt-20 grid grid-cols-3 w-full gap-8">
+    <section className="max-w-5xl w-full mt-20 grid grid-cols-3 items-center m-auto gap-8">
       {filteredJobs.length > 0 ? (
         filteredJobs.map((job: JobData) => <JobItem data={job} key={job.id} />)
       ) : (

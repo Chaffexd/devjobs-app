@@ -15,7 +15,7 @@ const JobItem = ({ data }: JobItemData) => {
 
   return (
     <Link href={formattedUrl}>
-      <div className="bg-white w-full rounded-md h-52 p-6 mb-8">
+      <div className="bg-white w-full rounded-md h-52 p-6 mb-8 shadow-md">
         <div
           className="h-12 w-12 rounded-lg flex items-center justify-center -mt-12"
           style={{ backgroundColor: data.logoBackground }}

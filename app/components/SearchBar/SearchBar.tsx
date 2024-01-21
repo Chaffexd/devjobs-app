@@ -1,7 +1,7 @@
 "use client";
 import LocationIcon from "@/public/assets/desktop/LocationIcon";
 import SearchIcon from "@/public/assets/desktop/SearchIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type SearchBarProps = {
   onSearch: (criteria: {
@@ -30,8 +30,14 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
     setLocation(e.target.value);
   };
 
+  useEffect(() => {
+    if (title === "" && location === "") {
+      onSearch({ title: "", location: "", fullTime });
+    }
+  }, [title, location, fullTime, onSearch]);
+
   return (
-    <div className="px-36 -mt-10">
+    <div className="max-w-5xl w-full m-auto -mt-10">
       <div className="flex justify-between rounded-md shadow-md items-center bg-white">
         <div className="flex w-2/4 border-r-2 border-slate-200 border-solid p-6">
           <SearchIcon />
