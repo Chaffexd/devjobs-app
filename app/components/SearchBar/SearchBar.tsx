@@ -55,7 +55,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             value={title}
             onChange={handleTitle}
             placeholder="Filter by title, companies, expertise..."
-            className="w-full sm:w-4/5 ml-2 dark:bg-gray-800"
+            className="w-full sm:w-4/5 ml-2 dark:bg-gray-800 focus:text-white dark:text-white"
           />
         </div>
         <div className="flex items-center sm:w-1/3 lg:w-1/5 sm:border-r-2 border-slate-200 dark:border-gray-700 border-solid p-6">
@@ -68,7 +68,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
             value={location}
             onChange={handleLocation}
             placeholder="Filter by location..."
-            className="w-4/5 ml-2 hidden sm:block dark:bg-gray-800"
+            className="w-4/5 ml-2 hidden sm:block dark:bg-gray-800 focus:text-white dark:text-white"
           />
         </div>
         <div className="flex items-center sm:w-1/3 lg:w-auto p-4">
