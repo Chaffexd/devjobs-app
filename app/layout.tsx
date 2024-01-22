@@ -5,6 +5,11 @@ import Navbar from "./components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: 'Devjobs - Frontend Mentor',
+  description: 'Frontend Mentor challenge',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{

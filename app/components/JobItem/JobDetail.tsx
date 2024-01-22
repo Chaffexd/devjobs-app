@@ -3,6 +3,7 @@
 import { JobData } from "@/app/models/types";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams, useSearchParams } from "next/navigation";
 const jobData = require("/public/data.json");
 
 type JobDetailProps = {
@@ -23,6 +24,16 @@ const JobDetail = ({ params }: JobDetailProps) => {
   const handleApplication = () => {
     alert("You have successfully applied!")
   };
+
+  // THIS IS A TEST TO GET THE STATE IN THE URL
+  // useSearchParams reads the QUERY string
+  // useParams lets you read the dynamic params filled in the URL
+  const urlParams = useParams<{ countryId: string; companyId: string; jobId: string; }>();
+  console.log("The URL Params are: ", urlParams);
+  const urlSearchparams = useSearchParams();
+  // get takes an argument which is the query param 'url.com/job?=123456'
+  const search = urlSearchparams.get("job");
+  console.log("The URL query is: ", search)
 
   return (
     <>
