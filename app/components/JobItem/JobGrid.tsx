@@ -40,7 +40,7 @@ const JobGrid = ({ filterCriteria }: JobGridProps) => {
   };
 
   return (
-    <section className="max-w-5xl w-full mt-20 px-8 flex flex-col sm:grid sm:grid-cols-2 sm:px-8 lg:grid-cols-3 sm:items-center m-auto gap-8">
+    <section className="max-w-5xl w-full mt-20 px-8 flex flex-col sm:grid sm:grid-cols-2 sm:px-8 lg:grid-cols-3 sm:items-center m-auto gap-8" data-testid="job-container">
       {filteredJobs.length > 0 ? (
         filteredJobs
           .slice(0, visibleJobs)
